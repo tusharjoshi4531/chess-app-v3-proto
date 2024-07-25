@@ -4,7 +4,7 @@
 // - protoc             v5.27.1
 // source: services/game_room_manager_service.proto
 
-package gamerRoomManagerService
+package gameRoomManagerService
 
 import (
 	context "context"

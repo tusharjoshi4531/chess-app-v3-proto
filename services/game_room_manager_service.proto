@@ -1,5 +1,5 @@
 syntax = "proto3";
-option go_package = "github.com/tusharjoshi4531/chess-app-v3-proto/gamerRoomManagerService";
+option go_package = "github.com/tusharjoshi4531/chess-app-v3-proto/gameRoomManagerService";
 
 message InvitationMessage {
   string sourceUsername = 1;
