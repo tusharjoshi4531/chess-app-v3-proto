@@ -1,5 +1,5 @@
 syntax = "proto3";
-option go_package = "github.com/tusharjoshi4531/chess-app-v3-proto/gameRoomManagerService";
+option go_package = "github.com/tusharjoshi4531/chess-app-v3-proto/gamesManagerService";
 
 message InvitationMessage {
   string sourceUsername = 1;
@@ -15,7 +15,7 @@ message GameRoomMessage {
   string gameRoomId = 1;
 }
 
-service GameRoomManager {
+service GamesManager {
   rpc CreateInvite(InvitationMessage) returns (GameRoomMessage);
   rpc AcceptInvite(AcceptanceMessage) returns (GameRoomMessage);
 }
