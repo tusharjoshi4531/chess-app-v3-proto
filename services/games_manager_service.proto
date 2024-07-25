@@ -4,6 +4,8 @@ option go_package = "github.com/tusharjoshi4531/chess-app-v3-proto/gamesManagerS
 message InvitationMessage {
   string sourceUsername = 1;
   string targetUsername = 2;
+  int32 clockTime = 3;
+  int32 increment = 4;
 }
 
 message AcceptanceMessage {
@@ -15,6 +17,8 @@ message GameMessage {
   string sourceUsername = 1;
   string targetUsername = 2;
   string gameRoomId = 3;
+  int32 clockTime = 4;
+  int32 increment = 5;
 }
 
 service GamesManager {
