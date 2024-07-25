@@ -17,6 +17,6 @@ message GameRoomMessage {
 
 service GameRoomManager {
   rpc CreateInvite(InvitationMessage) returns (GameRoomMessage);
-  rpc AcceptInvite(InvitationMessage) returns (GameRoomMessage);
+  rpc AcceptInvite(AcceptanceMessage) returns (GameRoomMessage);
 }
 
