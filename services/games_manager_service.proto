@@ -11,14 +11,14 @@ message AcceptanceMessage {
   string gameRoomId = 2;
 }
 
-message GameRoomMessage {
+message GameMessage {
   string sourceUsername = 1;
   string targetUsername = 2;
   string gameRoomId = 3;
 }
 
 service GamesManager {
-  rpc CreateInvite(InvitationMessage) returns (GameRoomMessage);
-  rpc AcceptInvite(AcceptanceMessage) returns (GameRoomMessage);
+  rpc CreateInvite(InvitationMessage) returns (GameMessage);
+  rpc AcceptInvite(AcceptanceMessage) returns (GameMessage);
 }
 
