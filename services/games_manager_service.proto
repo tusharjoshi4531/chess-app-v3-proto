@@ -27,7 +27,9 @@ message GameMessage {
 }
 
 message InvitationRejectedMessage {
-  string gameRoomId = 1;
+  string sourceUsername = 1;
+  string targetUsername = 2;
+  string gameRoomId = 3;
 }
 
 service GamesManager {
