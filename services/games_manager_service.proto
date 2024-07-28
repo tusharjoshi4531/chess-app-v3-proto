@@ -26,9 +26,13 @@ message GameMessage {
   int32 increment = 5;
 }
 
+message InvitationRemovedMessage {
+  string gameRoomId = 1;
+}
+
 service GamesManager {
   rpc CreateInvite(InvitationMessage) returns (GameMessage);
   rpc AcceptInvite(AcceptanceMessage) returns (GameMessage);
-  rpc RejectInvite(RejectionMessage) returns (GameMessage);
+  rpc RejectInvite(RejectionMessage) returns (InvitationRemovedMessage);
 }
 
