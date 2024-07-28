@@ -23,7 +23,7 @@ message GameRoomMessage {
 }
 
 service GameService {
-  rpc CreateGame(CreateGameMessage) returns GameRoomMessage
+  rpc CreateGame(CreateGameMessage) returns (GameRoomMessage);
   rpc MoveStream(stream MoveMessage) returns (stream GameRoomMessage);
 }
 
