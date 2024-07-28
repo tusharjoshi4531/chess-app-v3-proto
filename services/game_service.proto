@@ -1,0 +1,23 @@
+syntax = "proto3";
+option go_package = "github.com/tusharjoshi4531/chess-app-v3-proto/gameService";
+
+message MoveMessage {
+  string playerUsername = 1;
+  string gameRoomId = 2;
+  string move = 3;
+}
+
+message GameRoomMessage {
+  string whiteUsername = 1;
+  string blackUsername = 2;
+  string fen = 3;
+  int32 whiteClock = 4;
+  int32 blackClock = 5;
+}
+
+service GameService {
+  rpc MoveStream(stream MoveMessage) returns (stream GameRoomMessage);
+}
+
+
+
