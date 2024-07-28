@@ -20,6 +20,7 @@ message GameRoomMessage {
   string fen = 3;
   int32 whiteClock = 4;
   int32 blackClock = 5;
+  string gameRoomId = 6;
 }
 
 service GameService {
