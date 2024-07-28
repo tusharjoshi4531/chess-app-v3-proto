@@ -16,3 +16,8 @@ generate_grpc:
     $(FILE_PATH)
 
 generate: clean_generated create_generated generate_grpc
+
+update_protocol:
+	git add . && \
+	git commit -m "updated protocol" && \
+	git push origin main
