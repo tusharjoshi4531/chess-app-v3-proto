@@ -25,6 +25,7 @@ message GameMessage {
   string gameRoomId = 3;
   int32 clockTime = 4;
   int32 increment = 5;
+  bool isSourceWhite = 6;
 }
 
 message InvitationRejectedMessage {
