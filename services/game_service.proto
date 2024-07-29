@@ -25,9 +25,15 @@ message GameRoomMessage {
   string outcome = 7;
 }
 
+message GameMoveMessge {
+  string fen = 1;
+  int32 whiteClock = 2;
+  int32 blackClock = 3;
+}
+
 service GameService {
   rpc CreateGame(CreateGameMessage) returns (GameRoomMessage);
-  rpc MoveStream(stream MoveMessage) returns (stream GameRoomMessage);
+  rpc MoveStream(stream MoveMessage) returns (stream GameMoveMessge);
 }
 
 
