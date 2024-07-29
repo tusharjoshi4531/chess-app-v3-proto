@@ -13,7 +13,6 @@ message MoveMessage {
   string playerUsername = 1;
   string gameRoomId = 2;
   string move = 3;
-  string fen = 4;
 }
 
 message GameRoomMessage {
