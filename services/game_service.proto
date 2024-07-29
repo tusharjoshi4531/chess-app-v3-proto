@@ -22,14 +22,14 @@ message GameRoomMessage {
   int32 whiteClock = 4;
   int32 blackClock = 5;
   string gameRoomId = 6;
-  string outcome = 7;
 }
 
 message GameMoveMessge {
   string fen = 1;
   int32 whiteClock = 2;
   int32 blackClock = 3;
-  bool error = 4;
+  string outcome = 4;
+  bool error = 5;
 }
 
 service GameService {
