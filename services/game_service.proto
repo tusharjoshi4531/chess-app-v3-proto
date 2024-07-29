@@ -29,6 +29,7 @@ message GameMoveMessge {
   string fen = 1;
   int32 whiteClock = 2;
   int32 blackClock = 3;
+  bool error = 4;
 }
 
 service GameService {
