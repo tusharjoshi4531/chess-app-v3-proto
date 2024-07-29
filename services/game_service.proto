@@ -4,8 +4,9 @@ option go_package = "github.com/tusharjoshi4531/chess-app-v3-proto/gameService";
 message CreateGameMessage {
   string whiteUsername = 1;
   string blackUsername = 2;
-  int32 clockTime = 3;
-  int32 increment = 4;
+  string gameRoomId = 3
+  int32 clockTime = 4;
+  int32 increment = 5;
 }
 
 message MoveMessage {
