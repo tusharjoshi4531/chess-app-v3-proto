@@ -22,6 +22,7 @@ message GameRoomMessage {
   int32 whiteClock = 4;
   int32 blackClock = 5;
   string gameRoomId = 6;
+  string outcome = 7;
 }
 
 service GameService {
