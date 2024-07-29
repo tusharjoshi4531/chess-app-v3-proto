@@ -6,6 +6,7 @@ message InvitationMessage {
   string targetUsername = 2;
   int32 clockTime = 3;
   int32 increment = 4;
+  bool isSourceWhite = 5;
 }
 
 message AcceptanceMessage {
