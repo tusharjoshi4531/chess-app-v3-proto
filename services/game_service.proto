@@ -31,10 +31,11 @@ message GameRoomMessage {
 
 message GameMoveMessge {
   string fen = 1;
-  int32 whiteClock = 2;
-  int32 blackClock = 3;
-  string outcome = 4;
-  bool error = 5;
+  repeated string moves = 2;
+  int32 whiteClock = 3;
+  int32 blackClock = 4;
+  string outcome = 5;
+  bool error = 6;
 }
 
 service GameService {
