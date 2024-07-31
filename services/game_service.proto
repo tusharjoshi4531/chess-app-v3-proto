@@ -9,6 +9,10 @@ message CreateGameMessage {
   int32 increment = 5;
 }
 
+message GetGameRoomMessage {
+  string gameRoomId = 1;
+}
+
 message MoveMessage {
   string playerUsername = 1;
   string gameRoomId = 2;
@@ -34,6 +38,7 @@ message GameMoveMessge {
 
 service GameService {
   rpc CreateGame(CreateGameMessage) returns (GameRoomMessage);
+  rpc GetGameRoom(GetGameRoomMessage) returns (GameRoomMessage);
   rpc MoveStream(stream MoveMessage) returns (stream GameMoveMessge);
 }
 
