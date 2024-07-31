@@ -23,9 +23,10 @@ message GameRoomMessage {
   string whiteUsername = 1;
   string blackUsername = 2;
   string fen = 3;
-  int32 whiteClock = 4;
-  int32 blackClock = 5;
-  string gameRoomId = 6;
+  repeated string moves = 4;
+  int32 whiteClock = 5;
+  int32 blackClock = 6;
+  string gameRoomId = 7;
 }
 
 message GameMoveMessge {
