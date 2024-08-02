@@ -8,14 +8,12 @@ message ProfileMessage {
   string dispName = 4;
 }
 
-message DeleteProfileMessage {
+message GetProfileMessage {
   string username = 1;
 }
-
-message EmptyMessage {}
 
 service ProfileService {
   rpc CreateProfile(ProfileMessage) returns (ProfileMessage);
   rpc UpdateProfile(ProfileMessage) returns (ProfileMessage);
-  rpc DeleteProfile(DeleteProfileMessage) returns (EmptyMessage);
+  rpc GetProfile(GetProfileMessage) returns (ProfileMessage);
 }
