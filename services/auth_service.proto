@@ -11,6 +11,10 @@ message LoginMessage {
   string Password = 2;
 }
 
+message LogoutMessage {
+  string refreshToken = 1;
+}
+
 message EmptyMessage{}
 
 message AuthMessage {
@@ -27,5 +31,6 @@ message AuthResponseMessage {
 service AuthService {
   rpc Signup(SignupMessage) returns (EmptyMessage);
   rpc Login(LoginMessage) returns (AuthResponseMessage);
+  rpc Logout(LogoutMessage) returns (EmptyMessage);
   rpc Authenticate(AuthMessage) returns (AuthResponseMessage);
 }
