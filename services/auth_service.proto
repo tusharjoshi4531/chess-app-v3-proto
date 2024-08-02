@@ -1,5 +1,5 @@
 syntax = "proto3";
-option go_package = "github.com/tusharjoshi4531/chess-app-v3-proto/gameService";
+option go_package = "github.com/tusharjoshi4531/chess-app-v3-proto/authService";
 
 message SignupMessage {
   string Username = 1;
