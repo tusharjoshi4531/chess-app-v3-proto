@@ -18,8 +18,14 @@ message AuthMessage {
   string refreshToken = 2;
 }
 
+message AuthResponseMessage {
+  string username = 1;
+  string accessToken = 2;
+  string refreshToken = 3;
+}
+
 service AuthService {
   rpc Signup(SignupMessage) returns (EmptyMessage);
   rpc Login(LoginMessage) returns (AuthMessage);
-  rpc Authenticate(AuthMessage) returns (AuthMessage);
+  rpc Authenticate(AuthMessage) returns (AuthResponseMessage);
 }
