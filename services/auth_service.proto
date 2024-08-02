@@ -1,0 +1,25 @@
+syntax = "proto3";
+option go_package = "github.com/tusharjoshi4531/chess-app-v3-proto/gameService";
+
+message SignupMessage {
+  string Username = 1;
+  string Password = 2;
+}
+
+message LoginMessage {
+  string Username = 1;
+  string Password = 2;
+}
+
+message EmptyMessage{}
+
+message AuthMessage {
+  string accessToken = 1;
+  string refreshToken = 2;
+}
+
+service AuthService {
+  rpc Signup(SignupMessage) returns (SignupMessage);
+  rpc Login(LoginMessage) returns (AuthMessage);
+  rpc Authenticate(AuthMessage) returns (AuthMessage);
+}
