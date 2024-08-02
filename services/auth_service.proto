@@ -19,7 +19,7 @@ message AuthMessage {
 }
 
 service AuthService {
-  rpc Signup(SignupMessage) returns (SignupMessage);
+  rpc Signup(SignupMessage) returns (EmptyMessage);
   rpc Login(LoginMessage) returns (AuthMessage);
   rpc Authenticate(AuthMessage) returns (AuthMessage);
 }
