@@ -26,6 +26,6 @@ message AuthResponseMessage {
 
 service AuthService {
   rpc Signup(SignupMessage) returns (EmptyMessage);
-  rpc Login(LoginMessage) returns (AuthMessage);
+  rpc Login(LoginMessage) returns (AuthResponseMessage);
   rpc Authenticate(AuthMessage) returns (AuthResponseMessage);
 }
