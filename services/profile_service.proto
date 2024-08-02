@@ -15,7 +15,7 @@ message DeleteProfileMessage {
 message EmptyMessage {}
 
 service ProfileService {
-  rpc CreateProfile(ProfileMessage) returns (ProfileMessage)
-  rpc UpdateProfile(ProfileMessage) returns (ProfileMessage)
-  rpc DeleteProfile(DeleteProfileMessage) returns (EmptyMessage)
+  rpc CreateProfile(ProfileMessage) returns (ProfileMessage);
+  rpc UpdateProfile(ProfileMessage) returns (ProfileMessage);
+  rpc DeleteProfile(DeleteProfileMessage) returns (EmptyMessage);
 }
