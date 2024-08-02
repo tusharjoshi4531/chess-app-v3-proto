@@ -1,2 +1,21 @@
 syntax = "proto3";
-option go_package = "github.com/tusharjoshi4531/chess-app-v3-proto/authService";
+option go_package = "github.com/tusharjoshi4531/chess-app-v3-proto/profileService";
+
+message ProfileMessage {
+  string username = 1;
+  string firstName = 2;
+  string lastName = 3;
+  string dispName = 4;
+}
+
+message DeleteProfileMessage {
+  string username = 1;
+}
+
+message EmptyMessage {}
+
+service ProfileService {
+  rpc CreateProfile(ProfileMessage) returns (ProfileMessage)
+  rpc UpdateProfile(ProfileMessage) returns (ProfileMessage)
+  rpc DeleteProfile(DeleteProfileMessage) returns (EmptyMessage)
+}
