@@ -41,7 +41,7 @@ message GameMoveMessge {
 service GameService {
   rpc CreateGame(CreateGameMessage) returns (GameRoomMessage);
   rpc GetGameRoom(GetGameRoomMessage) returns (GameRoomMessage);
-  rpc MoveStream(MoveMessage) returns (GameMoveMessge);
+  rpc MakeMove(MoveMessage) returns (GameMoveMessge);
 }
 
 
