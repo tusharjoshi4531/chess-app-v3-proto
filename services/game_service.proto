@@ -29,19 +29,10 @@ message GameRoomMessage {
   string gameRoomId = 7;
 }
 
-message GameMoveMessge {
-  string fen = 1;
-  repeated string moves = 2;
-  int32 whiteClock = 3;
-  int32 blackClock = 4;
-  string outcome = 5;
-  bool error = 6;
-}
-
 service GameService {
   rpc CreateGame(CreateGameMessage) returns (GameRoomMessage);
   rpc GetGameRoom(GetGameRoomMessage) returns (GameRoomMessage);
-  rpc MakeMove(MoveMessage) returns (GameMoveMessge);
+  rpc MakeMove(MoveMessage) returns (GameRoomMessage);
 }
 
 
